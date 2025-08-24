@@ -1,0 +1,15 @@
+name: PizzaCP
+version: '1.0-SNAPSHOT'
+main: me.pizza.pizzacp.PizzaCP
+api-version: '1.21'
+author: Pizza
+depend: [MMOItems]
+
+commands:
+  pizzacp:
+    aliases: cp
+    permission: pizzacp.admin
+
+permissions:
+  pizzacp.admin:
+    default: op

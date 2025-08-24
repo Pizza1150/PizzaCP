@@ -1,0 +1,6 @@
+stats:
+  # สแตท 1 หน่วย จะมอบค่าพลังกี่หน่วย?
+  attack-damage: 1.5
+  max-health: 1.5
+  critical-strike-chance: 5
+  critical-strike-power: 5
