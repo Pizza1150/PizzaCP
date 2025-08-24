@@ -1,13 +1,13 @@
 package me.pizza.pizzacp.stat;
 
+import org.bukkit.Material;
+
 import net.Indyuce.mmoitems.stat.type.ItemStat;
 import net.Indyuce.mmoitems.stat.type.StringStat;
 
-import org.bukkit.Material;
-
 public class CPStat {
 
-    public static final ItemStat COMBAT_POWER = new StringStat(
+    public static final ItemStat<?, ?> COMBAT_POWER = new StringStat(
             "COMBAT_POWER",
             Material.MACE,
             "Combat Power",

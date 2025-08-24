@@ -46,7 +46,6 @@ public class ItemManager {
 
         // Current CP
         String current = getItemCp(nbt);
-
         return !recalculate.equals(current);
     }
 

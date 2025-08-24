@@ -1,14 +1,15 @@
 package me.pizza.pizzacp.listener;
 
-import io.papermc.paper.event.player.PlayerInventorySlotChangeEvent;
-import me.pizza.pizzacp.manager.ItemManager;
-import net.Indyuce.mmoitems.api.event.ItemBuildEvent;
-
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 
+import io.papermc.paper.event.player.PlayerInventorySlotChangeEvent;
+import me.pizza.pizzacp.manager.ItemManager;
+import net.Indyuce.mmoitems.api.event.ItemBuildEvent;
+
+@SuppressWarnings("deprecation")
 public class ItemListener implements Listener {
 
     private final ItemManager itemManager;

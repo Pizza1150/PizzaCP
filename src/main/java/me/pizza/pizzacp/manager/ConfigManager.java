@@ -1,10 +1,5 @@
 package me.pizza.pizzacp.manager;
 
-import me.pizza.pizzacp.PizzaCP;
-import net.Indyuce.mmoitems.MMOItems;
-import net.Indyuce.mmoitems.stat.type.DoubleStat;
-import net.Indyuce.mmoitems.stat.type.ItemStat;
-
 import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,6 +7,11 @@ import java.util.Map;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
+
+import me.pizza.pizzacp.PizzaCP;
+import net.Indyuce.mmoitems.MMOItems;
+import net.Indyuce.mmoitems.stat.type.DoubleStat;
+import net.Indyuce.mmoitems.stat.type.ItemStat;
 
 public class ConfigManager {
 

@@ -1,17 +1,16 @@
 package me.pizza.pizzacp.command;
 
-import me.pizza.pizzacp.PizzaCP;
-
 import java.util.List;
 
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class CoreCommand implements CommandExecutor, TabExecutor {
+import me.pizza.pizzacp.PizzaCP;
+
+public class CoreCommand implements TabExecutor {
 
     private final PizzaCP plugin;
 

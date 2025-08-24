@@ -1,5 +1,8 @@
 package me.pizza.pizzacp;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
+
 import lombok.Getter;
 import me.pizza.pizzacp.command.CoreCommand;
 import me.pizza.pizzacp.listener.ItemListener;
@@ -7,9 +10,6 @@ import me.pizza.pizzacp.manager.ConfigManager;
 import me.pizza.pizzacp.manager.ItemManager;
 import me.pizza.pizzacp.stat.CPStat;
 import net.Indyuce.mmoitems.MMOItems;
-
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PizzaCP extends JavaPlugin {
 
