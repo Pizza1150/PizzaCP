@@ -20,31 +20,29 @@ public class ItemManager {
         this.plugin = plugin;
     }
 
-    public ItemStack apply(ItemStack item) {
-        return apply(NBTItem.get(item));
+    public ItemStack applyCp(ItemStack item) {
+        return applyCp(NBTItem.get(item));
     }
 
-    public ItemStack apply(NBTItem nbt) {
-        if (!canApply(nbt)) return nbt.getItem();
+    public ItemStack applyCp(NBTItem nbt) {
+        if (!canApplyCp(nbt)) return nbt.getItem();
 
         LiveMMOItem mmoitem = new LiveMMOItem(nbt);
         mmoitem.setData(CPStat.COMBAT_POWER, new StringData(calculateItemCp(nbt)));
+
         return mmoitem.newBuilder().buildSilently();
     }
 
-    public boolean canApply(ItemStack item) {
-        return canApply(NBTItem.get(item));
+    public boolean canApplyCp(ItemStack item) {
+        return canApplyCp(NBTItem.get(item));
     }
 
-    public boolean canApply(NBTItem nbt) {
-        // Make sure it's MMOItem
+    public boolean canApplyCp(NBTItem nbt) {
         if (!nbt.hasType()) return false;
 
-        // Recalculate CP
         String recalculate = calculateItemCp(nbt);
         if (recalculate.equals("0")) return false;
 
-        // Current CP
         String current = getItemCp(nbt);
         return !recalculate.equals(current);
     }

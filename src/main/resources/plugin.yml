@@ -3,7 +3,7 @@ version: '1.0-SNAPSHOT'
 main: me.pizza.pizzacp.PizzaCP
 api-version: '1.21'
 author: Pizza
-depend: [MMOItems]
+depend: [MMOItems, MythicLib]
 
 commands:
   pizzacp:
