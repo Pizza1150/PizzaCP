@@ -2,6 +2,7 @@ package me.pizza.pizzacp.manager;
 
 import io.lumine.mythic.lib.api.item.NBTItem;
 import me.pizza.pizzacp.PizzaCP;
+import me.pizza.pizzacp.api.event.ApplyCpEvent;
 import me.pizza.pizzacp.stat.CPStat;
 import net.Indyuce.mmoitems.api.item.mmoitem.LiveMMOItem;
 import net.Indyuce.mmoitems.api.item.mmoitem.VolatileMMOItem;
@@ -10,6 +11,7 @@ import net.Indyuce.mmoitems.stat.data.StringData;
 
 import java.text.DecimalFormat;
 
+import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemManager {
@@ -28,7 +30,11 @@ public class ItemManager {
         if (!canApplyCp(nbt)) return nbt.getItem();
 
         LiveMMOItem mmoitem = new LiveMMOItem(nbt);
-        mmoitem.setData(CPStat.COMBAT_POWER, new StringData(calculateItemCp(nbt)));
+
+        ApplyCpEvent event = new ApplyCpEvent(mmoitem, calculateItemCp(nbt));
+        Bukkit.getPluginManager().callEvent(event);
+
+        mmoitem.setData(CPStat.COMBAT_POWER, new StringData(event.getValue()));
 
         return mmoitem.newBuilder().buildSilently();
     }
